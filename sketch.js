@@ -2,6 +2,8 @@ function setup() {
   createCanvas(500, 500, SVG)
   noLoop()
   angleMode(DEGREES)
+  // Put the center of the rectangle at the orgin and not the left upper corner
+  rectMode(CENTER)
 }
 
 function draw() {
