@@ -8,7 +8,13 @@ function setup() {
   
   PALETTE = [
     color(255, 52, 154), //pink
-    color(4, 0, 152) //blue
+    color(4, 0, 152),
+    'limegreen',
+    'orange',
+    'red',
+    'brown',
+    'burgundy',
+    'teal'
   ]
   noLoop()
   angleMode(DEGREES)
@@ -30,13 +36,18 @@ function testLines() {
     numShapes = SIDES * 2
   }
 
+  const rando2 = floor(random(0, PALETTE.length))
+  const strokeColor = PALETTE[rando2]
+  console.log(rando2)
+
 
   noFill()
   push()
     translate(width/2, height/2)
     stroke(PALETTE[0])
     ellipse(0, 0, CRYSTAL_SIZE, CRYSTAL_SIZE)
-    stroke(PALETTE[1])
+
+    stroke(strokeColor)
     const angle = 360 / numShapes
 
     for (let i = 0; i < numShapes; i++) {
