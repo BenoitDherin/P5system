@@ -24,13 +24,13 @@ function draw() {
 
 function simpleLines() {
   const stepsOut = 8
-  const numSteps = getRandomSelectTwo() ? stepsOut : int(stepsOut * 1.25)
+  const numSteps = randomSelectTwo() ? stepsOut : int(stepsOut * 1.25)
   const step = (CRYSTAL_SIZE / 2) / numSteps
   const start = floor(random(0, numSteps))
   const stop = floor(random(start, numSteps + 1))
 
   const numShapes = randomSelectTwo() ? SIDES : SIDES * 2
-  const strokeColor = getRandomFromPalette()
+  const strokeColor = randomFromPalette()
   const angle = 360 / numShapes
 
   noFill()
@@ -46,7 +46,7 @@ function simpleLines() {
 } 
 
 function outlineShape(){
-  stroke(getRandomFromPalette())
+  stroke(randomFromPalette())
   strokeWeight(randomSelectTwo() ? 1 : 3)
 
   push()
@@ -59,7 +59,7 @@ function testLines() {
   //strokeWeight(3)
 
   const numShapes = randomSelectTwo() ? SIDES : SIDES * 2
-  const strokeColor = getRandomFromPalette()
+  const strokeColor = randomFromPalette()
   console.log(strokeColor)
 
   noFill()

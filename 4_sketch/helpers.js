@@ -19,6 +19,6 @@ function randomSelectTwo() {
   return random(1) > 0.5 ? true: false
 }
 
-function getRandomFromPalette(){
+function randomFromPalette(){
   return PALETTE[floor(random(0, PALETTE.length))] 
 }
