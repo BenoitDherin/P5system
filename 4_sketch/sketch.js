@@ -18,7 +18,7 @@ function setup() {
 
 function draw() {
   // testLines()
-  // outlineShape()
+  outlineShape()
   simpleLines()
 }
 
@@ -77,5 +77,3 @@ function testLines() {
     }
   pop()
 }
-
-
